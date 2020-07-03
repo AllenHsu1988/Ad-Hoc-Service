@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <script src="/public/javascripts/jquery.min.js"></script>
+    <title>PG ipa server</title>
+</head>
+<body>
+    <h1> PhotoGrid Ad-Hoc </h1>
+    {{#items}}
+    <div class="collapsible">{{appName}}</div>
+    <div class="content">
+        <ul>
+            {{#ipas}}
+            <li>
+                <img src="{{iconString}}" class="icon" />
+                <div class="info">
+                    <span class="name">{{name}}</span>
+                    <div class="desc">{{version}}</div>
+                    <div class="desc">{{timeString}}</div>
+                </div>
+                <a href="javascript:;" data-name={{name}} downloadUrl="itms-services://?action=download-manifest&url=https://{{ip}}:{{port}}/plist/{{encodedData}}" class="link">下載</a>
+            </li>
+            <hr/>
+            {{/ipas}}
+        </ul>
+    </div>
+    {{/items}}
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+    	$('.link').click(function(){
+            if(confirm("確定下載 " + $(this).attr('data-name') + " ?")){
+                window.location.href = $(this).attr('downloadUrl');
+            }
+        });
+    </script>
+</body>
+</html>
