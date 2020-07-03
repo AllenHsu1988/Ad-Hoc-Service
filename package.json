@@ -4,7 +4,7 @@
   "description": "Server providing iOS Ad-Hoc",
   "dependencies": {
     "adm-zip": "^0.4.7",
-    "base64-url": "^1.3.3",
+    "base64-url": "^2.0.0",
     "commander": "^2.9.0",
     "dbushell-grunt-mustatic": "^0.1.1",
     "express": "^4.13.1",
