@@ -8,6 +8,16 @@ a {
   text-decoration: none;
 }
 
+.warning {
+	color: hsl(0, 100%, 68%);
+	text-decoration: none;
+}
+
+.warningOrnage {
+	color: hsl(24, 100%, 68%);
+	text-decoration: none;
+}
+
 #qrcodeTable table{
 	margin: 0px auto;
 }
@@ -99,3 +109,11 @@ li {
   html, body {
   touch-action: manipulation;
 }
+
+.img-frame{
+	width: 100%;
+	padding-bottom: 100%;
+	background: gray;
+	overflow: hidden;
+	position: relative;
+  }

@@ -53,10 +53,24 @@
             }
         });
     </script>
-    <h3 style="font-weight: normal;">
-        <a style="font-size:18px;font-weight: bold" id='cer' href="https://{{ip}}:{{port}}/cer/myCA.cer">Click to download certification<br><br></a>
-        Install certification: Settings->General->Profile<br>
-        Enable trust: Settings->General->About->Certificate Trust Settings
-    </h3>
+
+    <hr>
+
+    <h2 style="font-weight: normal;">
+        <a style="font-size:20px;font-weight: bold" id='cer' href="https://{{ip}}:{{port}}/cer/myCA.cer">Click to download certification<br></a>
+    </h2>
+    <p style="font-size:16px;">Install certification: Settings->General->Profile</p>
+    <p style="font-size:16px;">Enable trust: Settings->General->About->Certificate Trust Settings</p>
+
+    <hr>
+
+    <h2 class="warning" style="font-size:20px;font-weight: bold"">iOS 15+ devices not supporting now！<br></h2>
+    <h3 class="warningOrnage" style="font-size:18px;">Install ipa for iOS15+ devices:</h3>
+    <p style="font-size:16px;">1. From your mac</p>
+    <p style="font-size:16px;">2. Donwload ipa from jenkins user content</p>
+    <p style="font-size:16px;">3. Open finder and select the iOS device on the left</p>
+    <p style="font-size:16px;">4. Drag the ipad file in to fonder and will install the ipa</p>
+
+    <img src="/public/assets/ipa_install.png" alt="ipa install above iOS15" width="350">
 </body>
 </html>
