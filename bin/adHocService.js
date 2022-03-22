@@ -43,7 +43,7 @@ var ipAddress = program.ip || underscore
 
 
 
-var globalCerFolder = osHomedir() + '/.pg-ipa-service/' + ipAddress;
+var globalCerFolder = osHomedir() + '/.adHocService/' + ipAddress;
 var port = program.port || 1234;
 var port2 = port + 1;
 
