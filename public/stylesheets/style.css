@@ -109,11 +109,3 @@ li {
   html, body {
   touch-action: manipulation;
 }
-
-.img-frame{
-	width: 100%;
-	padding-bottom: 100%;
-	background: gray;
-	overflow: hidden;
-	position: relative;
-  }
